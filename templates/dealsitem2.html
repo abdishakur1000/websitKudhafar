@@ -1,0 +1,16 @@
+<div class="border-bottom row" style="margin-bottom: 100px; padding-bottom: 4px;">
+  <div class='col-4'>
+  <h4 
+    style="color:rgb(120,120,120); margin-bottom:10px;">
+    {{ deal['title'] }}      
+  </h4>
+  <div>
+    <b>Description: </b> {{ deal['description'] }}</div>
+  <div>
+    <b>Sales: </b> {{ deal['sales'] }}</div>
+    {% if 'image' in deal %}
+    <div class="img-fluid" id='images'><b>Image: </b> <img class="img-fluid mt-2l" src="{{ url_for('static', filename=deal['image']) | safe }}"></div>
+      {% endif %}
+    
+  <button type="button" class="btn btn-primary">Get</button>
+    </div>

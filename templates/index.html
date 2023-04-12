@@ -12,22 +12,36 @@
         height: 360px;
         width: 100%;
       }
+      #images{
+        height: 100px;
+        width: 30%;
+        margin-bottom: 160px;
+        margin-top: 10px;
+      }
+      
     </style>
   </head>
   
   <body>
     <div class='container'>
       <h1 class="mt-2 mb-4">Affliate Marketing</h1>
-      <h2 class="text-center mt-2 mb-4">About Affiliate marketing</h2>
+      <h2 class="text-center mt-2 mb-4">About {{abdi}} marketing</h2>
       <p class="lead">Affiliate marketing is a powerful tool for website owners to generate revenue and build partnerships with other businesses. By promoting products or services through affiliate links, website owners can earn a commission on any resulting sales. Here are some nice words about affiliate marketing and its benefits for websites:</p>
-      <img class="img-fluid" id="banner" src="https://websitkudhafar.abdishakur1000.repl.co/static/shopping.jpg" alt="">
-      <h2 class="text-center mt-2 mb-4">Up coming deals</h2>
-      <p>Todo - show the deals</p>
-      <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 2023, Abdishakur</p>
+      <img class="img-fluid" id="banner" src="static/shopping.jpg" alt="">
+        <h2 class="text-center">Up coming deals</h2>
+        <div>
+  {% for deal in deals %}
+    {% include "dealsitem.html" %}
+  {% endfor %}
+</div>
+
+
+          <div class="text-center">
+          <button class="btn btn-primary btn-lg">Contact Us</button>
+          <p class="mt-4">Copyright 2023, Abdishakur</p>
       </div>
     </div>
+    
 
 
 
